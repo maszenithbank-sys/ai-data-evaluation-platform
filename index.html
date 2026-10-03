@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Data Evaluation Platform</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>AI Data Evaluation Platform</h1>
+            <p>Evaluate and compare AI-generated responses</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <h2>Evaluation Task</h2>
+
+            <label for="prompt">Prompt</label>
+
+            <textarea
+                id="prompt"
+                placeholder="Enter the user's question or prompt..."
+            ></textarea>
+        </section>
+
+
+        <section class="responses">
+
+            <div class="card">
+                <h2>Response A</h2>
+
+                <textarea
+                    id="responseA"
+                    placeholder="Enter AI response A..."
+                ></textarea>
+            </div>
+
+
+            <div class="card">
+                <h2>Response B</h2>
+
+                <textarea
+                    id="responseB"
+                    placeholder="Enter AI response B..."
+                ></textarea>
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>Evaluation Criteria</h2>
+
+            <div class="criteria">
+
+                <div class="criterion">
+                    <label>Accuracy</label>
+                    <select id="accuracy">
+                        <option value="1">1 - Poor</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="3">3 - Good</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                </div>
+
+
+                <div class="criterion">
+                    <label>Relevance</label>
+                    <select id="relevance">
+                        <option value="1">1 - Poor</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="3">3 - Good</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                </div>
+
+
+                <div class="criterion">
+                    <label>Clarity</label>
+                    <select id="clarity">
+                        <option value="1">1 - Poor</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="3">3 - Good</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                </div>
+
+
+                <div class="criterion">
+                    <label>Completeness</label>
+                    <select id="completeness">
+                        <option value="1">1 - Poor</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="3">3 - Good</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                </div>
+
+
+                <div class="criterion">
+                    <label>Safety</label>
+                    <select id="safety">
+                        <option value="1">1 - Poor</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="3">3 - Good</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>Which response is better?</h2>
+
+            <div class="decision-buttons">
+
+                <button id="responseABtn">
+                    Response A is better
+                </button>
+
+                <button id="responseBBtn">
+                    Response B is better
+                </button>
+
+                <button id="tieBtn">
+                    Both are similar
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>Evaluator Notes</h2>
+
+            <textarea
+                id="notes"
+                placeholder="Explain your evaluation..."
+            ></textarea>
+
+            <button id="submitBtn" class="submit-button">
+                Submit Evaluation
+            </button>
+
+        </section>
+
+
+        <section id="result" class="card result hidden">
+
+            <h2>Evaluation Result</h2>
+
+            <p id="resultMessage"></p>
+
+            <div class="score">
+                Overall Score:
+                <strong id="overallScore">0</strong>/5
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
